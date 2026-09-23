@@ -12,40 +12,27 @@ class PoliPage extends StatefulWidget {
 class _PoliPageState extends State<PoliPage> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(title: const Text("Data Poli")),
-      body:ListView(
-        children:  [
+      body: ListView(
+        children: [
           GestureDetector(
-            child: Card(
-              child: ListTile(
-                title: const Text("Poli Anak"),
-              ) ,
-            ),
+            child: Card(child: ListTile(title: const Text("Poli Anak"))),
             onTap: () {
               Poli poliAnak = Poli(namaPoli: "Poli Anak");
               Navigator.push(
-                context, 
-                MaterialPageRoute(builder: (context) => PoliDetail(poli: poliAnak)));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PoliDetail(poli: poliAnak),
+                ),
+              );
             },
           ),
-          Card(
-            child: ListTile(
-              title: Text("Poli Kandungan"),
-            ) ,
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Poli Gigi"),
-            ) ,
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Poli THT"),
-            ) ,
-          )
+          Card(child: ListTile(title: Text("Poli Kandungan"))),
+          Card(child: ListTile(title: Text("Poli Gigi"))),
+          Card(child: ListTile(title: Text("Poli THT"))),
         ],
-      )
+      ),
     );
   }
 }

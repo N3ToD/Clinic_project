@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'ui/poli_page.dart';
+import 'ui/list_halaman.dart';
 
-void main() => runApp(MyApp());  
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Klinik APP',
       debugShowCheckedModeBanner: false,
-      home: PoliPage(),
+      home: ListHalaman(),
     );
   }
 }
