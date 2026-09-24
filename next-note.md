@@ -1,4 +1,0 @@
-- menyelesaikan halaman pasien
-- menambahkan pasien_page
-- memperbaiki tampilan pada masing-masing detail pasien dan pegawai
-- tampilan pasien/pegawai tidak hanya 1 orang

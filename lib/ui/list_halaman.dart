@@ -1,6 +1,8 @@
+import 'package:clinic_project/model/pasien.dart';
 import 'package:clinic_project/model/pegawai.dart';
 import 'package:flutter/material.dart';
 import 'pegawai_detail.dart';
+import 'pasien_detail.dart';
 
 class ListHalaman extends StatefulWidget {
   const ListHalaman({super.key});
@@ -37,7 +39,21 @@ class _ListHalamanState extends State<ListHalaman> {
           ),
           GestureDetector(
             child: Card(child: ListTile(title: const Text("Pasien"))),
-            onTap: () {},
+            onTap: () {
+              Pasien contohPasien = Pasien(
+                nomorRm: "Test",
+                namaPasien: "Test",
+                alamatTinggal: "Test",
+                noTelp: "Test",
+                tglLahir: "Test",
+              );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PasienDetail(pasien: contohPasien),
+                ),
+              );
+            },
           ),
           GestureDetector(
             child: Card(child: ListTile(title: const Text("Daftar Poli"))),
