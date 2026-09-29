@@ -1,0 +1,32 @@
+import 'package:flutter/material.dart';
+
+class PasienForm extends StatefulWidget {
+  const PasienForm({super.key});
+
+  @override
+  State<PasienForm> createState() => _PasienFormState();
+}
+
+class _PasienFormState extends State<PasienForm> {
+  final _formkey = GlobalKey<FormState>();
+  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: ListTile(title: const Text("Tambah Pasien"),),),
+      body: SingleChildScrollView(
+        child: Form(
+          key: _formkey,
+          child: Column(
+            children: [
+              TextField(
+                decoration: const InputDecoration(labelText: "Nama Pasien"),
+              ),
+              SizedBox(height: 20,),
+              ElevatedButton(onPressed: () {}, child: const Text("Simpan"))
+            ],
+          ),),
+      )
+    );
+  }
+}
