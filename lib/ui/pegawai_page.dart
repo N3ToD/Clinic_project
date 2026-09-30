@@ -1,6 +1,7 @@
-    import 'package:clinic_project/model/pegawai.dart';
-import 'package:clinic_project/ui/pegawai_detail.dart';
+import 'package:clinic_project/model/pegawai.dart';
 import 'package:flutter/material.dart';
+import 'pegawai_form.dart';
+import 'pegawai_item.dart';
 
 class PegawaiPage extends StatelessWidget {
   const PegawaiPage({super.key});
@@ -8,17 +9,34 @@ class PegawaiPage extends StatelessWidget {
   @override
   Widget build(context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("Daftar Pegawai"),),
-        body: ListView(
-            children: [
-                GestureDetector(child: Card(child: ListTile(title: const Text("Pegawai 1"),),),
-                onTap: () {
-                    Pegawai absenPegawai1 = Pegawai(nomorNip: "19240974", namaPegawai: "Muhammad Naufal Rizqullah", inpPassword: "BrookFarmMilk123", noEmail: "naufalplaypark@gmail.com", noTelp: "+62 0859-6719-4310", tglLahir: "20/04/2005");
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => PegawaiDetail(pegawai: absenPegawai1,)));
-                },
-                )
-            ],
-        ),
+      appBar: AppBar(
+        title: const Text("Daftar Pegawai"),
+        actions: [
+          GestureDetector(
+            child: const Icon(Icons.add_box_outlined),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PegawaiForm()),
+              );
+            },
+          ),
+        ],
+      ),
+      body: ListView(
+        children: [
+          PegawaiItem(
+            pegawai: Pegawai(
+              nomorNip: "aaa",
+              namaPegawai: "namaPegawai",
+              inpPassword: "inpPassword",
+              noEmail: "noEmail",
+              noTelp: "noTelp",
+              tglLahir: "tglLahir",
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

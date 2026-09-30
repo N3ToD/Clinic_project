@@ -13,7 +13,9 @@ class _PasienFormState extends State<PasienForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: ListTile(title: const Text("Tambah Pasien"),),),
+      appBar: AppBar(title: ListTile(title: const Text("Tambah Pasien"),),
+      
+      ),
       body: SingleChildScrollView(
         child: Form(
           key: _formkey,
@@ -23,7 +25,9 @@ class _PasienFormState extends State<PasienForm> {
                 decoration: const InputDecoration(labelText: "Nama Pasien"),
               ),
               SizedBox(height: 20,),
-              ElevatedButton(onPressed: () {}, child: const Text("Simpan"))
+              ElevatedButton(onPressed: () {
+
+              }, child: const Text("Simpan"))
             ],
           ),),
       )
